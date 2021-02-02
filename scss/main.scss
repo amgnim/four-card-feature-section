@@ -1,0 +1,46 @@
+@import './config';
+
+/*** RESET STYLES ***/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-gray;
+  font-size: 15px;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+/*** BASE STYLES ***/
+
+@import './utilities';
+
+/*** HEADER ***/
+
+@import './header';
+
+/*** FEATURE CARD COMPONENT ***/
+
+@import './card-component';
+
+/*** ATTRIBUTION ***/
+
+.attribution {
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 1.5rem;
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+  }
+}

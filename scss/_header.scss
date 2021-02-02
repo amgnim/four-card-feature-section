@@ -1,0 +1,30 @@
+.header {
+  @include flex();
+  width: 80%;
+  text-align: center;
+  margin-top: 4rem;
+
+  h1 {
+    color: $dark-blue;
+    font-weight: 200;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: 760px) {
+    width: 100%;
+    max-width: 30rem;
+
+    h1 {
+      font-size: 2.1rem;
+      line-height: 1.4;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'f1'
+    'f2'
+    'f3'
+    'f4';
+  gap: 2rem;
+  margin: 4rem 2rem;
+
+  p {
+    font-size: 0.8rem;
+    width: 95%;
+    margin-bottom: 6rem;
+  }
+
+  img {
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+  }
+
+  &-f1 {
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    grid-area: f1;
+    @include feature-card-style($cyan);
+  }
+
+  &-f2 {
+    @extend .feature-grid-f1;
+
+    grid-area: f2;
+    @include feature-card-style($red);
+  }
+
+  &-f3 {
+    @extend .feature-grid-f1;
+
+    grid-area: f3;
+    @include feature-card-style($orange);
+  }
+
+  &-f4 {
+    @extend .feature-grid-f1;
+
+    grid-area: f4;
+    @include feature-card-style($blue);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'f1 f2'
+      'f3 f4';
+    max-width: 65rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '. f2 .'
+      'f1 f2 f4'
+      'f1 f3 f4'
+      '. f3 .';
+    max-width: 65rem;
+  }
+}

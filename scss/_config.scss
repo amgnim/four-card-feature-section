@@ -1,0 +1,30 @@
+/*** VARIABLES & FUNCTIONS ***/
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+$dark-blue: hsl(234, 12%, 34%);
+$grayish-blue: hsl(229, 6%, 66%);
+$light-gray: hsl(0, 0%, 98%);
+
+$font-stack: 'Poppins', sans-serif;
+$padding: 1.5rem;
+
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@mixin feature-card-style($color) {
+  background: #fff;
+  padding: $padding;
+  border-radius: 0.4rem;
+  border-top: 4px solid $color;
+  box-shadow: 0.5rem 1.25rem 1rem -0.3rem hsla(212, 68%, 58%, 0.1),
+    0rem 0.625rem 0.625rem -0.3rem hsla(0, 0%, 0%, 0.04);
+  position: relative;
+}
